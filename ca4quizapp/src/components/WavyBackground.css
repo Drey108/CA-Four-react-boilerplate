@@ -1,0 +1,27 @@
+.wavy-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-size: 400% 200%;
+    animation: waveAnimation 15s ease infinite ;
+}
+
+@keyframes waveAnimation {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+.light-mode .wavy-background {
+    background-image: linear-gradient(45deg, #008172, #001f1c, #008172);
+}
+
+.dark-mode .wavy-background {
+    background-image: linear-gradient(45deg, #508e6a, #d0fff2, #508e6a);
+}
